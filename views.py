@@ -4,10 +4,6 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 def home(request):
-     #f=open('C:/pythonprog/filehandling/test.txt','r')
-     #return HttpResponse(f.read())
-     #return  HttpResponse("<a href=www.mmmut.ac.in>mmmut</a>")
-     #params={'name':'shrinkhala','place':'mars'}
      return render(request,'index2.html')
 
 def analyze(request):
@@ -29,8 +25,7 @@ def analyze(request):
                 analyzed=analyzed+char
         params={'purpose':'removed punctuations','analyzed_text':analyzed}
         textdj=analyzed
-        #return render(request,'analyze2.html',params)
-
+        
     #change uppercase
     if fullcaps=="on":
         analyzed=" "
